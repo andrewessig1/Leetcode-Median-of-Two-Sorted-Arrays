@@ -1,11 +1,12 @@
 public class Solution {
     public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
-            int lenCombined = nums1.Length + nums2.Length;
-            int[] nums3 = new int[lenCombined];
+             int lenCombined = nums1.Length + nums2.Length;
+            int[] nums3 = new int[lenCombined / 2 + 1];
             int i = 0;
             int y = 0;
             int z = 0;
-            while(i + y < lenCombined)
+            //We only need to fill the sorted array up to the median
+            while(z < (lenCombined / 2 + 1))
             {
                 if (i > nums1.Length - 1)
                 {
